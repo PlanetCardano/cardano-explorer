@@ -1,0 +1,9 @@
+version: '2'
+
+services:
+  cardano-explorer:
+    image: planetcardano/cardano-explorer:1.2
+    ports:
+     - "8100:8100"
+    volumes:
+      - /cardano/state-wallet-mainnet:/home/cardano/cardano-sl/state-wallet-mainnet
