@@ -10,8 +10,8 @@ If you're running an Ubuntu box, you can use [this script](https://gist.github.c
 sudo mkdir -p /cardano/state-wallet-mainnet && sudo chmod -R 777 /cardano/state-wallet-mainnet
 
 docker pull planetcardano/cardano-explorer
-docker run -d -v /cardano/state-wallet-mainnet:/home/cardano/cardano-sl/state-wallet-mainnet -p "8090:8090" planetcardano/cardano-explorer:1.2
-# TODO FIX curl -sfk https://localhost:8090/api/settings/sync/progress
+docker run -d -v /cardano/state-wallet-mainnet:/home/cardano/cardano-sl/state-wallet-mainnet -p "8100:8100" planetcardano/cardano-explorer:1.2
+curl http://localhost:8100/api/blocks/pages/total
 ```
 
 Full source code, including an example [docker-compose.yml](https://github.com/PlanetCardano/cardano-explorer/blob/master/docker-compose.yml) are available on our [Github](https://github.com/planetcardano). This version of the container supports a beta release of the v1 API, which is [documented here](https://cardanodocs.com/technical/wallet/api/v1).
